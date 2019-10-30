@@ -28,12 +28,12 @@ For more details, see [this Extensions page on the wiki](https://github.com/LLK/
 
 
 |                                                    | Core（核心） | Team（團隊） | Official（官方）| Unofficial（非官方） |
-| ---------------------------------------------------| ------------ | ------------| --------------- | ------------------  |
-| 由Scratch團隊開發（Developed by Scratch Team）      |      √       |       √     |        O        |          X          |
-| 由Scratch團隊維護（Maintained by Scratch Team）     |      √       |       √     |        O        |          X          |
-| 出現於擴充功能區（Shown in Library）                 |      X      |        √    |        √        |           X          |
-| 實驗擴充功能（Sandboxed）                            |      X      |        X    |        √        |           √          |
-| Can save projects to community | √    | √    | √        | X          |
+| ----------------------------------------------     | ------------ | ------------| --------------- | ------------------  |
+| 由Scratch團隊開發（Developed by Scratch Team）      |      √       |      √      |        O        |          X          |
+| 由Scratch團隊維護（Maintained by Scratch Team）     |      √       |      √      |        O        |          X          |
+| 出現於擴充功能區（Shown in Library）                |      X       |       √     |        √        |           X          |
+| 實驗擴充功能（Sandboxed）                           |      X       |       X     |        √        |           √          |
+| 能夠儲存至社群專案（Can save projects to community） |     √        |     √       |       √        |           X          |
 
 ## JavaScript Environment
 
