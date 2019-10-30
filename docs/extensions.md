@@ -1,4 +1,4 @@
-# Scratch 3.0 Extensions
+# Scratch 3.0擴充功能（Scratch 3.0 Extensions）
 
 This document describes technical topics related to Scratch 3.0 extension development, including the Scratch 3.0
 extension specification.
