@@ -13,9 +13,11 @@ wiki](https://github.com/LLK/docs/wiki/Extensions).
 ## 擴充功能的類型（Types of Extensions）
 
 Scratch 3.0有四種類型的擴充功能，包含Scratch核心函式庫（例如：「外觀」與「運算」類型）到可以從遠端網址下載的非官方擴充功能。
+
 There are four types of extensions that can define everything from the Scratch's core library (such as the "Looks" and
 "Operators" categories) to unofficial extensions that can be loaded from a remote URL.
 
+**Scratch 3.0至今並不支持非官方的擴充功能。**
 **Scratch 3.0 does not yet support unofficial extensions.**
 
 For more details, see [this Extensions page on the wiki](https://github.com/LLK/docs/wiki/Extensions).
