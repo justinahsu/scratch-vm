@@ -1,10 +1,12 @@
 # Scratch 3.0擴充功能（Scratch 3.0 Extensions）
 
 本文描述與Scratch 3.0擴充功能開發相關的科技議題，包含Scratch 3.0擴充功能的規格。
+
 This document describes technical topics related to Scratch 3.0 extension development, including the Scratch 3.0
 extension specification.
 
 有關於其他與Scratch 3.0擴充功能相關的部分，請參考[this Extensions page on the wiki](https://github.com/LLK/docs/wiki/Extensions)。
+
 For documentation regarding other aspects of Scratch 3.0 extensions see [this Extensions page on the
 wiki](https://github.com/LLK/docs/wiki/Extensions).
 
