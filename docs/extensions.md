@@ -18,16 +18,21 @@ There are four types of extensions that can define everything from the Scratch's
 "Operators" categories) to unofficial extensions that can be loaded from a remote URL.
 
 **Scratch 3.0至今並不支持非官方的擴充功能。**
+
 **Scratch 3.0 does not yet support unofficial extensions.**
+
+更多相關訊息，詳見[this Extensions page on the wiki](https://github.com/LLK/docs/wiki/Extensions)。
 
 For more details, see [this Extensions page on the wiki](https://github.com/LLK/docs/wiki/Extensions).
 
-|                                | Core | Team | Official | Unofficial |
-| ------------------------------ | ---- | ---- | -------- | ---------- |
-| Developed by Scratch Team      | √    | √    | O        | X          |
-| Maintained by Scratch Team     | √    | √    | O        | X          |
-| Shown in Library               | X    | √    | √        | X          |
-| Sandboxed                      | X    | X    | √        | √          |
+
+
+|                                                    | Core（核心） | Team（團隊） | Official（官方）| Unofficial（非官方） |
+| ---------------------------------------------------| ------------ | ------------| --------------- | ------------------  |
+| 由Scratch團隊開發（Developed by Scratch Team）      |      √       |       √     |        O        |          X          |
+| 由Scratch團隊維護（Maintained by Scratch Team）     |      √       |       √     |        O        |          X          |
+| 出現於擴充功能區（Shown in Library）                 |      X      |        √    |        √        |           X          |
+| 實驗擴充功能（Sandboxed）                            |      X      |        X    |        √        |           √          |
 | Can save projects to community | √    | √    | √        | X          |
 
 ## JavaScript Environment
