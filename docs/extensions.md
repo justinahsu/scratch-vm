@@ -70,7 +70,7 @@ proposal phase and may change before implementation.
 
 ## 向下兼容
 
-Scratch具有完整的版本向下兼容性。因此，程式積木與指令 *絕對不可以* 改變，這樣會造成之前儲存的專案無法載入或是無法依照預期／一致性的
+Scratch具有完整的版本向下兼容性。因此，程式積木與定義 *絕對不可以* 改變，這樣會造成之前儲存的專案無法載入或是無法依照預期／一致性的
 方式運作。
 
 ## Backwards Compatibility
@@ -110,14 +110,15 @@ class SomeBlocks {
 }
 ```
 
-所有的擴充功能必須定義一個命名為`getInfo`的函式，它會回傳一個物件，這個物件包含
-
+所有的擴充功能必須定義一個命名為`getInfo`的函式，它會回傳一個物件，這個物件包含產生程式積木與擴充功能本身所需要的資訊。
 
 All extensions must define a function called `getInfo` which returns an object that contains the information needed to
 render both the blocks and the extension itself.
 
+
 ```js
 // Core, Team, and Official extensions can `require` VM code:
+// 核心、團隊與官方擴充功能可以 `require` VM程式碼：
 const ArgumentType = require('../../extension-support/argument-type');
 const BlockType = require('../../extension-support/block-type');
 
@@ -125,8 +126,11 @@ class SomeBlocks {
     // ...
     getInfo () {
         return {
+            
+            // 定義擴充功能的id、名稱
             id: 'someBlocks',
             name: 'Some Blocks',
+            // 定義擴充功能內的積木
             blocks: [
                 {
                     opcode: 'myReporter',
@@ -150,7 +154,10 @@ class SomeBlocks {
 }
 ```
 
+最後，擴充功能必須對於每個上面**blocks**內的"opcode"建立函式加以定義。例如：
 Finally the extension must define a function for any "opcode" defined in the blocks. For example:
+
+myReporter這個opcode在上面blocks中建立，因此需要建立一個函式說明其定義。
 
 ```js
 class SomeBlocks {
@@ -161,6 +168,8 @@ class SomeBlocks {
     // ...
 }
 ```
+
+### 積木
 ### Block Arguments
 In addition to displaying text, blocks can have arguments in the form of slots to take other blocks getting plugged in, or dropdown menus to select an argument value from a list of possible values.
 
