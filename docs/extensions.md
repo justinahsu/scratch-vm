@@ -291,6 +291,7 @@ getDynamicMenuItems () {
 }
 ```
 
+上述的例子與以下例子的有相同的定義。
 The examples above are shorthand for these equivalent definitions:
 
 ```js
@@ -312,6 +313,9 @@ getDynamicMenuItems () {
 }
 ```
 
+如果選單項目需要一個標籤，但是標籤並等於它所對應的值-- 舉例來說，如果標籤需要顯示使用者的語言，但是它對應的值是固定的--選單項目本身可以是一個物件
+而非是字串。這對於固定與動態的選單項目均適用：
+
 If a menu item needs a label that doesn't match its value -- for example, if the label needs to be displayed in the
 user's language but the value needs to stay constant -- the menu item may be an object instead of a string. This works
 for both static and dynamic menu items:
@@ -327,12 +331,18 @@ menus: {
 }
 ```
 
+##### 以有回傳值的積木做為參數（"可以加入積木"的選單）
 ##### Accepting reporters ("droppable" menus)
+
+在預設狀況下，在下拉式選單中加入一個積木做為參數是不可能的。雖然我們鼓勵擴充功能的作者儘可能能夠讓他們的選單可以加入積木做為參數，
+但是這樣做需要有特別的考量以避免造成使用者的混淆與挫折感。
 
 By default it is not possible to specify the value of a dropdown menu by inserting a reporter block. While we
 encourage extension authors to make their menus accept reporters when possible, doing so requires careful
 consideration to avoid confusion and frustration on the part of those using the extension.
 
+
+以下為一些考量：
 A few of these considerations include:
 
 * The valid values for the menu should not change when the user changes the Scratch language setting.
