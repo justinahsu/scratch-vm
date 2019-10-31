@@ -70,13 +70,19 @@ proposal phase and may change before implementation.
 
 ## 向下兼容
 
-
+Scratch具有完整的版本向下兼容性。因此，程式積木與指令 *絕對不可以* 改變，這樣會造成之前儲存的專案無法載入或是無法依照預期／一致性的
+方式運作。
 
 ## Backwards Compatibility
 
 Scratch is designed to be fully backwards compatible. Because of this, block definitions and opcodes should *never*
 change in a way that could cause previously saved projects to fail to load or to act in unexpected / inconsistent
 ways.
+
+## 定義擴充功能
+
+Scratch的擴充功能被定義成一個單一的JavaScript類別，它可以
+
 
 ## Defining an Extension
 
