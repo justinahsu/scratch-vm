@@ -81,7 +81,7 @@ ways.
 
 ## 定義擴充功能
 
-Scratch的擴充功能被定義成一個單一的JavaScript類別，它可以
+Scratch的擴充功能被定義成一個單一的JavaScript類別，它可以參照 Scratch[VM](https://github.com/llk/scratch-vm)
 
 
 ## Defining an Extension
