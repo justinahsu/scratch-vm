@@ -81,8 +81,8 @@ ways.
 
 ## 定義擴充功能
 
-Scratch的擴充功能被定義成一個單一的JavaScript類別，它可以參照 Scratch[VM](https://github.com/llk/scratch-vm)
-
+Scratch的擴充功能被定義成一個單一的JavaScript類別，它可以參照 Scratch[VM](https://github.com/llk/scratch-vm) runtime，或是
+可以處理跟Scratch VM溝通的 "代理伺服器" ，透過定義良好的工作者範圍（例如：實驗測試環境）進行溝通。
 
 ## Defining an Extension
 
@@ -90,11 +90,16 @@ Scratch extensions are defined as a single Javascript class which accepts either
 [VM](https://github.com/llk/scratch-vm) runtime or a "runtime proxy" which handles communication with the Scratch VM
 across a well defined worker boundary (i.e. the sandbox).
 
+
+以下是用JavaScript定義一個類別（SomeBlocks）的積木：
+
 ```js
 class SomeBlocks {
     constructor (runtime) {
         /**
+         * 儲存用以之後與 Scratch VM runtime溝通。
          * Store this for later communication with the Scratch VM runtime.
+         * 如果這個擴充功能是運作在實驗測試環境，那麼 `runtime`指的是非同步的代理伺服器物件。
          * If this extension is running in a sandbox then `runtime` is an async proxy object.
          * @type {Runtime}
          */
@@ -104,6 +109,9 @@ class SomeBlocks {
     // ...
 }
 ```
+
+所有的擴充功能必須定義一個命名為`getInfo`的函式，它會回傳一個物件，這個物件包含
+
 
 All extensions must define a function called `getInfo` which returns an object that contains the information needed to
 render both the blocks and the extension itself.
