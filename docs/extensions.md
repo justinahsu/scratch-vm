@@ -246,7 +246,7 @@ return {
 #### Defining a Menu
 
 
-在用下拉式選單顯示程式積木的參數時，設定參數中`menu`的屬性，並且在擴充功能定義中，以選單的方式來定義。
+在用下拉式選單顯示程式積木的參數時，設定參數中`menu`的屬性，並且在擴充功能定義中，在 `menus` 項下進行定義。
 To display a drop-down menu for a block argument, specify the `menu` property of that argument and a matching item in
 the `menus` section of your extension's definition:
 
@@ -345,19 +345,38 @@ consideration to avoid confusion and frustration on the part of those using the 
 以下為一些考量：
 A few of these considerations include:
 
+* 在使用者改變語言設定後，選單的有效值不應該因此而改變。
+  * 特別是在改變語言設定時，不可以破壞一個正在進行中的專案。
+  
 * The valid values for the menu should not change when the user changes the Scratch language setting.
   * In particular, changing languages should never break a working project.
+  
+* 一般的Scratch使用者應該可以理解輸入的有效值，而不用參考擴充功能的文件。
+  * 其中一個方法是項目的文字等於或是包含項目的值。舉例來說，官方的音樂擴充功能的選單項目使用"(1) 鋼琴" 對應值 1 與 "(8) 大提琴"對應值 8 。
+  
 * The average Scratch user should be able to figure out the valid values for this input without referring to extension
   documentation.
   * One way to ensure this is to make an item's text match or include the item's value. For example, the official Music
     extension contains menu items with names like "(1) Piano" with value 1, "(8) Cello" with value 8, and so on.
+    
+* 程式積木應該接受任何值為為參數值，即使是"無效"值。
+  * Scratch沒有執行錯誤這個概念！
+  * 對於一個命令積木，有時候最好處理的方式就是什麼事都別做。
+  * 對於有回傳值的積木，回傳0或是空字串是可以理解的方式。
+  
 * The block should accept any value as input, even "invalid" values.
   * Scratch has no concept of a runtime error!
   * For a command block, sometimes the best option is to do nothing.
   * For a reporter, returning zero or the empty string might make sense.
+  
+* 程式積木應該對於輸入資料的詮釋能夠寬容。
+ * 例如，如果積木期待一個字串，但卻接收到一個數字，那麼就應該將這個數字當做是字串，而非將其視為是無效的輸入。
+ 
 * The block should be forgiving in its interpretation of inputs.
   * For example, if the block expects a string and receives a number it may make sense to interpret the number as a
     string instead of treating it as invalid input.
+
+`acceptReporters`屬性代表使用者可以將有回傳值的積木放進選單中：
 
 The `acceptReporters` flag indicates that the user can drop a reporter onto the menu input:
 
@@ -373,6 +392,8 @@ menus: {
     }
 }
 ```
+
+## 加註解的範例
 
 ## Annotated Example
 
@@ -402,15 +423,15 @@ class SomeBlocks {
      */
     getInfo () {
         return {
-            // Required: the machine-readable name of this extension.
-            // Will be used as the extension's namespace.
+            // Required: the machine-readable name of this extension. 必要欄位
+            // Will be used as the extension's namespace. 
             id: 'someBlocks',
 
-            // Core extensions only: override the default extension block colors.
+            // Core extensions only: override the default extension block colors. （核心擴充功能：覆蓋預設擴充功能積木的顏色）
             color1: '#FF8C1A',
             color2: '#DB6E00',
 
-            // Optional: the human-readable name of this extension as string.
+            // Optional: the human-readable name of this extension as string. 非必要欄位
             // This and any other string to be displayed in the Scratch UI may either be
             // a string or a call to `formatMessage`; a plain string will not be
             // translated whereas a call to `formatMessage` will connect the string
