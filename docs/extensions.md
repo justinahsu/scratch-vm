@@ -52,18 +52,25 @@ compatibility for those extensions, including transpiling if necessary.
 
 ## 翻譯（Translation）
 
-Scratch擴充功能使用[ICU message format](http://userguide.icu-project.org/formatparse/messages) 進行語言間的翻譯。
-
+Scratch擴充功能使用[ICU message format](http://userguide.icu-project.org/formatparse/messages) 進行語言間的翻譯。 有關於**核心、
+團隊, 與官方**的擴充功能，可以使用`formatMessage` 的函式包裹任何的需要輸出到 [Scratch Transifex group](https://www.transifex.com/llk/public/) 翻譯的ICU messages。
 
 Scratch extensions use the [ICU message format](http://userguide.icu-project.org/formatparse/messages) to handle
 translation across languages. For **core, team, and official** extensions, the function `formatMessage` is used to
 wrap any ICU messages that need to be exported to the [Scratch Transifex group](https://www.transifex.com/llk/public/)
 for translation.
 
+**所有擴充功能**也可以在`getInfo`的函式中，額外定義一個`translation_map`的物件，可以提供擴充功能本身的翻譯。以下"含有註解的範例"提供
+一個較完整的範例，說明擴充功能如何處理翻譯。 **警告：** `translation_map` 的功能目前正處在提議階段，在具體實施前可能會有所變動。
+
 **All extensions** may additionally define a `translation_map` object within the `getInfo` function which can provide
 translations within an extension itself. The "Annotated Example" below provides a more complete illustration of how
 translation within an extension can be managed. **WARNING:** the `translation_map` feature is currently in the
 proposal phase and may change before implementation.
+
+## 向下兼容
+
+
 
 ## Backwards Compatibility
 
