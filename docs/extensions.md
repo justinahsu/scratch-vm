@@ -186,11 +186,18 @@ The possible types of block arguments are as follows:
 - 數字─與之前字串的輸入類似，但是這類型的區塊只能接受數字。
 - Number - an input similar to the string input, but the type-able values are constrained to numbers.
 
-- 角度─
+- 角度─與數字輸入類似，但是需要額外的UI（介面）以圓形指針的方式選取角度。
 - Angle - an input similar to the number input, but it has an additional UI to be able to pick an angle from a
 circular dial
+
+- 布林 ─ 布林值的回傳數值積木為六角型。這個區塊並非類型區塊。
 - Boolean - an input for a boolean (hexagonal shaped) reporter block. This field is not type-able.
+
+- 顏色 ─ 選擇調色盤的顏色的輸入。這個區塊需要額外的UI（介面）選擇顏色的色調、飽和度與明亮度。有一種可能的方式是擴充功能開發者希望每次加入擴充功能加入時，顏色選擇器的預設值已經被設定好了，如果沒有預設值，擴充功能載入時會選取一個隨機的顏色。
+
 - Color - an input which displays a color swatch. This field has additional UI to pick a color by choosing values for the color's hue, saturation and brightness. Optionally, the defaultValue for the color picker can also be chosen if the extension developer wishes to display the same color every time the extension is added. If the defaultValue is left out, the default behavior of picking a random color when the extension is loaded will be used.
+
+-矩陣 ─ 用以輸入一個5 x 5矩陣的儲存格，
 - Matrix - an input which displays a 5 x 5 matrix of cells, where each cell can be filled in or clear.
 - Note - a numeric input which can select a musical note. This field has additional UI to select a note from a
 visual keyboard.
