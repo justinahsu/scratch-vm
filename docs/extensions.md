@@ -197,15 +197,28 @@ circular dial
 
 - Color - an input which displays a color swatch. This field has additional UI to pick a color by choosing values for the color's hue, saturation and brightness. Optionally, the defaultValue for the color picker can also be chosen if the extension developer wishes to display the same color every time the extension is added. If the defaultValue is left out, the default behavior of picking a random color when the extension is loaded will be used.
 
--矩陣 ─ 用以輸入一個5 x 5矩陣的儲存格，
+-矩陣 ─ 用以輸入一個5 x 5矩陣的儲存格，每個儲存格可以是填入或是清空。
 - Matrix - an input which displays a 5 x 5 matrix of cells, where each cell can be filled in or clear.
+
+-音符 ─一種數字的輸入，用以選擇音符。這個區塊需要額外的UI（介面）從鍵盤中選擇音符。
 - Note - a numeric input which can select a musical note. This field has additional UI to select a note from a
 visual keyboard.
+
+-影像─ 可以在積木上顯示影像。這是一個特別的參數類型，它並不會代表任何值，也不會接受其他積木做為參數。參見以下關於"加入影像"的章節。
+
 - Image - an inline image displayed on a block. This is a special argument type in that it does not represent a value and does not accept other blocks to be plugged-in in place of this block field. See the section below about "Adding an Inline Image".
 
+
+#### 加入影像
 #### Adding an Inline Image
+
+除了定訂積木的參數（如同上面以字串為參數的範例）時，你也可以使用影像參數。你必須包含影像的資料網址（dataURI）。如果沒有明訂，影像出現的位置會顯示空白的空間，然後在螢幕上會註記警告。
+
 In addition to specifying block arguments (an example of string arguments shown in the code snippet above),
 you can also specify an inline image for the block. You must include a dataURI for the image. If left unspecified, blank space will be allocated for the image and a warning will be logged in the console.
+
+另外你亦可以說明`flipRTL`，它是用來設定在由右至左書寫的語文的環境下，影像是否應該水平翻轉。影像預設是不翻轉。
+
 You can optionally also specify `flipRTL`, a property indicating whether the image should be flipped horizontally when the editor has a right to left language selected as its locale. By default, the image is not flipped.
 
 ```js
@@ -229,9 +242,11 @@ return {
 
 
 
-
+#### 設定選單
 #### Defining a Menu
 
+
+在用下拉式選單顯示程式積木的參數時，設定參數中`menu`的屬性，並且在擴充功能定義中，以選單的方式來定義。
 To display a drop-down menu for a block argument, specify the `menu` property of that argument and a matching item in
 the `menus` section of your extension's definition:
 
@@ -257,6 +272,7 @@ return {
 }
 ```
 
+選單中的項目可以使用陣列，或是回傳陣列的函式。以下為兩種最簡單選單定義的形式：
 The items in a menu may be specified with an array or with the name of a function which returns an array. The two
 simplest forms for menu definitions are:
 
