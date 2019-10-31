@@ -169,8 +169,10 @@ class SomeBlocks {
 }
 ```
 
-### 積木
+### 積木參數
 ### Block Arguments
+
+除了顯示文字之外，積木的參數可以是一個
 In addition to displaying text, blocks can have arguments in the form of slots to take other blocks getting plugged in, or dropdown menus to select an argument value from a list of possible values.
 
 The possible types of block arguments are as follows:
