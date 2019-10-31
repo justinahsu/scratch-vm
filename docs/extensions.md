@@ -38,14 +38,14 @@ For more details, see [this Extensions page on the wiki](https://github.com/LLK/
 ## JavaScript開發環境（JavaScript Environment）
 
 Scratch 3.0大部分的程式是使用JavaScript所撰寫的，但是使用到的特徵並未廣受瀏覽器所支持。基於相容性考量，在發佈與佈署之前，我們將程式碼
-轉譯成ES5。任何包含於`scratch-vm` 的資料夾中擴充功能，可以使用ES6+的特徵，但是可能要使用 `require` 去參照其他位於`scratch-vm` 資料夾
-的程式碼。
+轉譯成ES5（JavaScript ES5版本）。任何包含於`scratch-vm` 資料夾中的擴充功能，可以使用ES6+（JavaScript ES6+版本）的特徵，但是可能要使用
+`require` 去參照其他位於`scratch-vm` 資料夾的程式碼。
 
 Most Scratch 3.0 is written using JavaScript features not yet commonly supported by browsers. For compatibility we
 transpile the code to ES5 before publishing or deploying. Any extension included in the `scratch-vm` repository may
 use ES6+ features and may use `require` to reference other code within the `scratch-vm` repository.
 
-非官方的擴充功能必需要能夠自己自足。非官方擴充功能的作者必須確保瀏覽器的相容性，如果必要亦要協助程式轉譯的部分。
+非官方的擴充功能必需要能夠自己自足。非官方擴充功能的作者必須確保瀏覽器的相容性，如果必要時亦需要協助程式轉譯的工作。
 
 Unofficial extensions must be self-contained. Authors of unofficial extensions are responsible for ensuring browser
 compatibility for those extensions, including transpiling if necessary.
