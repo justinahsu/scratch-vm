@@ -172,13 +172,21 @@ class SomeBlocks {
 ### 積木參數
 ### Block Arguments
 
-除了顯示文字之外，積木的參數可以是一個
+除了顯示文字之外，積木的參數可以是一個空格讓別的積木插入，或是下拉式選單可以從中選擇可能的數值做為參數。
+
 In addition to displaying text, blocks can have arguments in the form of slots to take other blocks getting plugged in, or dropdown menus to select an argument value from a list of possible values.
+
+以下為可能的積木參數：
 
 The possible types of block arguments are as follows:
 
+- 字串─ 字串輸入，這是一個類型的區塊，可以接受其他有回傳值的積木。
 - String - a string input, this is a type-able field which also accepts other reporter blocks to be plugged in
+
+- 數字─與之前字串的輸入類似，但是這類型的區塊只能接受數字。
 - Number - an input similar to the string input, but the type-able values are constrained to numbers.
+
+- 角度─
 - Angle - an input similar to the number input, but it has an additional UI to be able to pick an angle from a
 circular dial
 - Boolean - an input for a boolean (hexagonal shaped) reporter block. This field is not type-able.
